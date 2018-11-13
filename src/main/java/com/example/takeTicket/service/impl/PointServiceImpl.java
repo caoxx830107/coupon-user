@@ -38,7 +38,28 @@ public class PointServiceImpl  implements PointService {
 
 	@Override
 	public void addPoint(String custId, String shopId, BigDecimal pointNum) {
-		custPointRecordMapper.addPoint(custId, shopId, pointNum);
+		CustPointRecord custPointRecordRet = new CustPointRecord();
+		custPointRecordRet = getPoint(custId,shopId);
+		if("".equals(custPointRecordRet.getCustId())){
+			//插入新数据
+			custPointRecordRet.setCustId(Long.valueOf(custId));
+			custPointRecordRet.setPointNumber(pointNum);
+			custPointRecordRet.setShopId(shopId);
+			custPointRecordMapper.insertSelective(custPointRecordRet);
+		} else {
+			//更新记录
+			custPointRecordMapper.addPoint(custId, shopId, pointNum);
+		}
+		
+		
+	}
+
+
+	@Override
+	public void subPoint(String custId, String shopId, BigDecimal subPointNum) {
+		
+		//兑换时用，应该不可能存在记录没有的情况
+		custPointRecordMapper.subPoint(custId, shopId, subPointNum);
 		
 	}
 

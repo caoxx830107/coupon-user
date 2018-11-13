@@ -24,4 +24,11 @@ public interface PointService {
      * @return
      */
 	void addPoint(String custId,String shopId,BigDecimal pointNum);
+	
+	/**
+     * 根据客户ID和商铺ID因为要兑换所以减少商铺的积分
+     * @param shop
+     * @return
+     */
+	void subPoint(String custId,String shopId,BigDecimal subPointNum);
 }

@@ -64,7 +64,7 @@
         #{pointState,jdbcType=DECIMAL},
       </if>
       <if test="createTime != null" >
-        #{createTime,jdbcType=TIMESTAMP},
+        sysdate,
       </if>
       <if test="updateTime != null" >
         #{updateTime,jdbcType=TIMESTAMP},

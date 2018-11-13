@@ -51,6 +51,18 @@ public class UserPointController {
 		return responseHeader;
     }
     
+    //据客户ID和商铺ID查改商铺的积分
+    @RequestMapping(value="/subPoint", method = RequestMethod.GET)
+    public ResponseHeader subPoint(@RequestParam("custId") String custId,@RequestParam("shopId") String shopId,@RequestParam("subPointNum") BigDecimal subPointNum) throws MilkTeaException{
+
+		Logger logger = LoggerFactory.getLogger(UserLoginController.class);
+		ResponseHeader responseHeader = new ResponseHeader();
+		pointService.subPoint(custId, shopId,subPointNum);
+		
+        
+		return responseHeader;
+    }
+    
    
 
 
