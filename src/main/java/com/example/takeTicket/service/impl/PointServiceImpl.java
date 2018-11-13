@@ -35,6 +35,13 @@ public class PointServiceImpl  implements PointService {
 		return custPointRecordRet;
 	}
 
+
+	@Override
+	public void addPoint(String custId, String shopId, BigDecimal pointNum) {
+		custPointRecordMapper.addPoint(custId, shopId, pointNum);
+		
+	}
+
 	
 
     
