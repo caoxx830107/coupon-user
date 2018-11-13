@@ -1,17 +1,17 @@
 package com.example.takeTicket.dao;
 
-import com.example.takeTicket.domain.custCouponRecord;
+import com.example.takeTicket.domain.CustCouponRecord;
 
 public interface custCouponRecordMapper {
     int deleteByPrimaryKey(String custCouponId);
 
-    int insert(custCouponRecord record);
+    int insert(CustCouponRecord record);
 
-    int insertSelective(custCouponRecord record);
+    int insertSelective(CustCouponRecord record);
 
-    custCouponRecord selectByPrimaryKey(String custCouponId);
+    CustCouponRecord selectByPrimaryKey(String custCouponId);
 
-    int updateByPrimaryKeySelective(custCouponRecord record);
+    int updateByPrimaryKeySelective(CustCouponRecord record);
 
-    int updateByPrimaryKey(custCouponRecord record);
+    int updateByPrimaryKey(CustCouponRecord record);
 }

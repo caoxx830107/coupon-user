@@ -1,9 +1,9 @@
 package com.example.takeTicket.dao;
 
-import com.example.takeTicket.domain.getPointRecord;
+import com.example.takeTicket.domain.GetPointRecord;
 
 public interface getPointRecordMapper {
-    int insert(getPointRecord record);
+    int insert(GetPointRecord record);
 
-    int insertSelective(getPointRecord record);
+    int insertSelective(GetPointRecord record);
 }

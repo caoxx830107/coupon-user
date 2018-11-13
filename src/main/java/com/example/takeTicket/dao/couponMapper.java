@@ -1,17 +1,25 @@
 package com.example.takeTicket.dao;
 
-import com.example.takeTicket.domain.coupon;
+import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
+
+import com.example.takeTicket.domain.Coupon;
 
 public interface couponMapper {
     int deleteByPrimaryKey(String couponId);
 
-    int insert(coupon record);
+    int insert(Coupon record);
 
-    int insertSelective(coupon record);
+    int insertSelective(Coupon record);
 
-    coupon selectByPrimaryKey(String couponId);
+    Coupon selectByPrimaryKey(String couponId);
 
-    int updateByPrimaryKeySelective(coupon record);
+    int updateByPrimaryKeySelective(Coupon record);
 
-    int updateByPrimaryKey(coupon record);
+    int updateByPrimaryKey(Coupon record);
+    
+    @Select("select * from COUPON where SHOP_ID = #{shopId}")
+    List<Coupon> getShopIdfindCoupon(@Param("shopId")String shopId);
 }

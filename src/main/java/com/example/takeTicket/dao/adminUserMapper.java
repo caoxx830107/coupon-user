@@ -1,17 +1,17 @@
 package com.example.takeTicket.dao;
 
-import com.example.takeTicket.domain.adminUser;
+import com.example.takeTicket.domain.AdminUser;
 
 public interface adminUserMapper {
     int deleteByPrimaryKey(String userId);
 
-    int insert(adminUser record);
+    int insert(AdminUser record);
 
-    int insertSelective(adminUser record);
+    int insertSelective(AdminUser record);
 
-    adminUser selectByPrimaryKey(String userId);
+    AdminUser selectByPrimaryKey(String userId);
 
-    int updateByPrimaryKeySelective(adminUser record);
+    int updateByPrimaryKeySelective(AdminUser record);
 
-    int updateByPrimaryKey(adminUser record);
+    int updateByPrimaryKey(AdminUser record);
 }

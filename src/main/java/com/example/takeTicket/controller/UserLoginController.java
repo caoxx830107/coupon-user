@@ -10,19 +10,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class UserLoginController {
 
-	@Autowired
-	RejectedService rejectedService;
-
-
-    @RequestMapping("/setNewRejected")
-    public ResponseHeader updateRejected(@RequestBody AppRejected appRejected) throws MilkTeaException{
-        ResponseHeader responseHeader=new ResponseHeader();
-
-        rejectedService.setNewRejected(appRejected);
-
-        return  responseHeader;
-
-    }
+//	@Autowired
+//	RejectedService rejectedService;
+//
+//
+//    @RequestMapping("/setNewRejected")
+//    public ResponseHeader updateRejected(@RequestBody AppRejected appRejected) throws MilkTeaException{
+//        ResponseHeader responseHeader=new ResponseHeader();
+//
+//        rejectedService.setNewRejected(appRejected);
+//
+//        return  responseHeader;
+//
+//    }
 
 
 }
